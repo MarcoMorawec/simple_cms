@@ -1,0 +1,21 @@
+<h1>Demo#HELLO!</h1>
+
+<p>Hello World from the hello file! </p>
+
+ID: <%= @id %></br>
+Next page: <%= @page + 1 %>
+</br>
+
+<%= 1+1 %>
+
+<% target = "world" %>
+
+<%= "hello #{target}" %>
+</br>
+
+<% @array.each do |n|%>
+	<%= n %></br>
+<% end %>
+
+<%= link_to("go to index", {:controller => 'demo', :action => 'index'}) %>
+
