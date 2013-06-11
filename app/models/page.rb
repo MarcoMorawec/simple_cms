@@ -6,7 +6,6 @@ class Page < ActiveRecord::Base
 
    #going against rails naming convention here, but telling rails that by editors 
    #we mean actually AdminUsers in the class => AdminUser
-   has_and_belongs_to_many :editors, :class_name => "AdminUser"
 
 
 end
