@@ -1,13 +1,18 @@
 <div class="container">
 	<h1>Welcome to the list page</h1>
 
+	<div class="row">
+		<div class="span4">
+			<h5>Subject  Visible  Pages</h5>
+		</div>
+	</div>
 	<% @subject.each do |subject| %>
 	<div class="row">
 		<div class="span4">
-			<%= subject.name %>
-			<%= subject.position %>
-			<%= subject.visible ? 'Yes' : 'No' %>
-			<%= subject.pages.size %>
+				<%= subject.name %>
+				<%= subject.position %>
+				<%= subject.visible ? 'Yes' : 'No' %>
+				<%= subject.pages.size %>
 		</div>
 		<div class="span4">
 			<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action_show') %>
