@@ -1,0 +1,59 @@
+<div class = "container">
+
+	<div class="pull-left">
+		<%= link_to("<<Back to list", {:action => 'list'}, :class => 'link_style' ) %>
+	</div>
+	<div class="span10">
+		<h2>Show Subject Details</h2>
+
+		<div class = "row">
+			<div class = "span3">
+				<strong>Name</strong>
+			</div>
+			<div class = "span5">
+				<%= @subject.name %>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class = "span3">
+				<strong>Position</strong>
+			</div>
+			<div class = "span5">
+				<%= @subject.position %>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class = "span3">
+				<strong>Visible</strong>
+			</div>
+			<div class = "span5">
+				<%= @subject.visible ? 'True' : 'False' %>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class = "span3">
+				<strong>Created</strong>
+			</div>
+			<div class = "span5">
+				<%= @subject.created_at %>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class = "span3">
+				<strong>Updated</strong>
+			</div>
+			<div class = "span5">
+				<%= @subject.updated_at %>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+</div>
