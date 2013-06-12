@@ -6,11 +6,12 @@ class SubjectsController < ApplicationController
 		render ('list')
 	end
 
-
+	#instance variable in list action is plural!
 	def list
 		@subjects = Subject.order("subjects.position ASC")
 	end
 
+	#instance variable in show action is singular!
 	def show
 		@subject = Subject.find(params[:id])
 	end
