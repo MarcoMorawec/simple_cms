@@ -27,9 +27,20 @@ class SectionsController < ApplicationController
 		@section = Section.find(params[:id])
 	end
 
-	#def update
+	#fix bug in update action -> doesn't find the ID
+	def update
+		@section = Section.find(params[:id])
+		if @section.update_attributes(params[:section])
+			redirect_to(:action => 'show', :id => @section.id)
+		else
+			render('edit')
+		end
+	end
 
-
+	def destroy
+		@section = Section.find(params[:id]).destroy
+		redirect_to(:action => "list")
+	end
 
 
 
