@@ -16,4 +16,8 @@ class SubjectsController < ApplicationController
 		@subject = Subject.find(params[:id])
 	end
 
+	def create
+		@subject = Subject.new(:name => params[:name], :position => params[:position], :visible => params[:visible])
+	end
+
 end

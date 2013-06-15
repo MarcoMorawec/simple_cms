@@ -1,0 +1,16 @@
+<div class = "container">
+	<div class="span5 well">
+		<!-- Creating the form -->
+
+		<%= form_tag(:action => 'create') do %>
+
+			<%= text_field_tag('subject[name]') %>
+
+			<%= submit_tag("Create Subject") %>
+
+
+		<% end %>
+		<%= link_to("<< Back to List", {:action => 'list'}, :class => "link_class") %>
+	</div>
+
+</div>
