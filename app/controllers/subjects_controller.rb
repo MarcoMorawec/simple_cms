@@ -33,6 +33,7 @@ class SubjectsController < ApplicationController
 		end
 	end
 
+
 	def edit
 		#find by ID
 		@subject = Subject.find(params[:id])
@@ -50,6 +51,12 @@ class SubjectsController < ApplicationController
 		else
 			render('edit')
 		end
+	end
+
+	def destroy
+		@subject = Subject.find(params[:id])
+		@subject.destroy
+		redirect_to(:action => 'list') 
 	end
 
 
