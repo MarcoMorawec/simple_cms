@@ -54,8 +54,7 @@ class SubjectsController < ApplicationController
 	end
 
 	def destroy
-		@subject = Subject.find(params[:id])
-		@subject.destroy
+		Subject.find(params[:id]).destroy
 		redirect_to(:action => 'list') 
 	end
 
