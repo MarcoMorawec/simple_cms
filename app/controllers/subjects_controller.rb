@@ -26,6 +26,7 @@ class SubjectsController < ApplicationController
 	#save the object
 		if @subject.save
 			#if save succeeds display list view
+			flash[:notice] = "Your new Subject was created!"
 			redirect_to(:action => 'list')
 			#if save fails display form again
 		else

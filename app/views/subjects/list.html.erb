@@ -1,6 +1,12 @@
 <div class="container">
 	<h1>Welcome to the list page</h1>
 
+	<% if !flash[:notice].blank? %>
+		<div class="alert">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+
 	<div class="row">
 		<div class="span4">
 			<h5>Subject  Visible  Pages</h5>
