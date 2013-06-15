@@ -47,6 +47,7 @@ class SubjectsController < ApplicationController
 	#update the object
 		if @subject.update_attributes(params[:subject])
 			#if update succeeds display list view
+			flash[:notice] = "Your subject was updated!"
 			redirect_to(:action => 'show', :id => @subject.id)
 			#if update fails display form again
 		else
@@ -56,6 +57,7 @@ class SubjectsController < ApplicationController
 
 	def destroy
 		Subject.find(params[:id]).destroy
+		flash[:notice] = "Your Subject was deleted!"		
 		redirect_to(:action => 'list') 
 	end
 
