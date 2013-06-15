@@ -23,6 +23,12 @@ class SectionsController < ApplicationController
 		end
 	end
 
+	def edit
+		@section = Section.find(params[:id])
+	end
+
+	#def update
+
 
 
 
