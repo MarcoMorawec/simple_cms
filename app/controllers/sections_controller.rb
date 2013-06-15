@@ -14,8 +14,14 @@ class SectionsController < ApplicationController
 		@section = Section.new
 	end
 
-	#def create
-	#end
+	def create
+		@section = Section.new(params[:section])
+		if @section.save
+			redirect_to(:action => 'list')
+		else
+			render('new')
+		end
+	end
 
 
 
