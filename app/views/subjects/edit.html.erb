@@ -1,9 +1,10 @@
 <div class = "container">
 	<div class="span5 well">
-		<h2>Create a New Subject</h2>
+		<h2>Edit a the Subject</h2>
+
 		<!-- Creating the form -->
 
-		<%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
+		<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
 			<%= f.label :name, "Subject Name" %>
 			<%= f.text_field(:name) %>
 
@@ -13,7 +14,7 @@
 			<%= f.label :name, "Subject Visible" %>
 			<%= f.text_field(:visible) %>
 
-			<%= submit_tag("Create Subject") %>
+			<%= submit_tag("Update Subject") %>
 
 
 		<% end %>

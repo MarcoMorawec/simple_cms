@@ -16,7 +16,7 @@
 		</div>
 		<div class="span4">
 			<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action_show') %>
-			<%= link_to("Edit", '#', :class => 'action_edit' ) %>
+			<%= link_to("Edit", {:action =>'edit', :id => subject.id}, :class => 'action_edit' ) %>
 			<%= link_to("Delete", '#', :class => 'action_delete') %>
 		</div>
 	</div>
