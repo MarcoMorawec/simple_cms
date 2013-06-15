@@ -2,9 +2,11 @@
 	<div class="span5 well">
 		<!-- Creating the form -->
 
-		<%= form_tag(:action => 'create') do %>
+		<%= form_for(@subject, :url => {:action => 'create'}) do |f| %>
 
-			<%= text_field_tag('subject[name]') %>
+			<%= f.text_field(:name) %>
+			<%= f.text_field(:position) %>
+			<%= f.text_field(:visible) %>
 
 			<%= submit_tag("Create Subject") %>
 
