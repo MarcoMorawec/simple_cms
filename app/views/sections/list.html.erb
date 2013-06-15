@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Welcome to the Section list page</h1>
+
+	<!-- flash message goes here -->
+	<!-- end of flash message goes here -->
+
+
+	<% @section.each do |section| %>
+	
+		<%= section.name %>
+		<%= section.position %>
+		<%= section.content %>
+		<%= section.content_type %>
+		<%= section.visible %>
+
+	<% end %>
+
+</div>
