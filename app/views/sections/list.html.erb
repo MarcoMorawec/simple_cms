@@ -4,15 +4,30 @@
 	<!-- flash message goes here -->
 	<!-- end of flash message goes here -->
 
+	<div class="well">
+		<div class="row">
+			<% @section.each do |section| %>
+			<div class="row">
+				<div class = "span4">
+					<%= section.name %>
+					<%= section.position %>
+					<%= section.content %>
+					<%= section.content_type %>
+					<%= section.visible %>
+				</div>
+				<div class="span4">
+					<%= link_to("Show", {:action => 'show', :id => section.id}, :class => 'link_class') %>
+					<%= link_to("Edit", {:action => 'edit', :id => section.id}, :class => 'link_class') %>
+					<%= link_to("Delete", {:action => 'delete', :id => section.id}, :class => 'link_class') %>
 
-	<% @section.each do |section| %>
-	
-		<%= section.name %>
-		<%= section.position %>
-		<%= section.content %>
-		<%= section.content_type %>
-		<%= section.visible %>
+				</div>
 
-	<% end %>
+
+			</div>
+			<% end %>
+		</div>
+
+
+	</div>
 
 </div>
