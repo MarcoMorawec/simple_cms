@@ -1,0 +1,22 @@
+<div class = "container">
+	<div class="span5 well">
+		<!-- Creating the form -->
+
+		<%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
+			<%= f.label :name, "Subject Name" %>
+			<%= f.text_field(:name) %>
+
+			<%= f.label :name, "Subject Position" %>
+			<%= f.text_field(:position) %>
+
+			<%= f.label :name, "Subject Visible" %>
+			<%= f.text_field(:visible) %>
+
+			<%= submit_tag("Create Subject") %>
+
+
+		<% end %>
+		<%= link_to("<< Back to List", {:action => 'list'}, :class => "back_link") %>
+	</div>
+
+</div>
