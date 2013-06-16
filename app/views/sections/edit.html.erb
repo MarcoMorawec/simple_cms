@@ -1,0 +1,27 @@
+<div class="container">
+
+	<h1>Edit your Section</h1>
+
+	<!-- Creating the form -->
+	<div class="span5 well">
+		<%= form_for(:section, :url => {:action => 'update'}) do |f| %>
+			<%= f.label :name, "Section Name" %>
+				<%= f.text_field(:name) %>
+			
+			<%= f.label :position, "Section Position" %>
+				<%= f.text_field(:position) %>
+			
+			<%= f.label :visible, "Section Visible" %>
+				<%= f.text_field(:visible) %>
+
+			<%= f.label :content_type, "Section Content Type" %>
+				<%= f.text_field(:content_type) %>
+
+			<%= f.label :content, "Section Content" %>
+				<%= f.text_field(:content) %>
+
+
+			<%= submit_tag("Edit your Section") %>
+		<% end %>
+	</div>
+</div>

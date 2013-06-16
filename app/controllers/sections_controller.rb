@@ -27,7 +27,7 @@ class SectionsController < ApplicationController
 		@section = Section.find(params[:id])
 	end
 
-	#fix bug in update action -> doesn't find the ID
+	#fix bug in update action -> doesn't find the ID - WAT!
 	def update
 		@section = Section.find(params[:id])
 		if @section.update_attributes(params[:section])
