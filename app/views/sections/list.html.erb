@@ -1,8 +1,14 @@
 <div class="container">
+
 	<h1>Welcome to the Section list page</h1>
 
 	<!-- flash message goes here -->
-	<!-- end of flash message goes here -->
+	<% if !flash[:notice].blank? %>
+		<div class="alert">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	<!-- end of flash message -->
 
 	<div class="well">
 		<div class="row">
