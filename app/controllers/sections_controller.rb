@@ -1,6 +1,9 @@
 class SectionsController < ApplicationController
 
-	#def index
+	def index
+		list
+		render('list')
+	end
 
 	def list
 		@section = Section.order("sections.position ASC")
