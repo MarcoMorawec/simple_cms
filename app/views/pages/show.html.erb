@@ -1,12 +1,65 @@
 <div class="container">
 
+	<div class="span10">
 	<h1>Your Page Details</h1>
+		<%= link_to("<<Back to List", {:action => 'list'}, :class => 'back_link') %>
 
-		<%= @page.name %>
-		<%= @page.position %>
-		<%= @page.visible %>
-		<%= @page.permalink %>
-		<%= @page.updated_at %>
-		<%= @page.created_at %>
+		<div class="well">
 
+			<div class = "row">
+				<div class = "span3">
+					<strong>Name</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.name %>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "span3">
+					<strong>Position</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.position %>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "span3">
+					<strong>Visible</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.visible ? 'True' : 'False' %>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "span3">
+					<strong>Permalink</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.permalink %>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "span3">
+					<strong>Created</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.created_at %>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "span3">
+					<strong>Updated</strong>
+				</div>
+				<div class = "span5">
+					<%= @page.updated_at %>
+				</div>
+			</div>
+	
+		</div>
+	</div>
 </div>

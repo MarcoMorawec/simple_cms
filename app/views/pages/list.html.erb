@@ -1,19 +1,25 @@
 <div class= "container">
 
 	<h1>Your Pages</h1>
-
-	<% @page.each do |page| %>
-
-		<%= page.name %>
-		<%= page.position %>
-		<%= page.visible %>
-		<%= page.permalink %>
-
-		<%= link_to("Show", {:action => 'show', :id => page.id}, :class => 'link')	%>	
-		<%= link_to("Edit", {:action => 'edit', :id => page.id}, :class => 'link')	%>	
-		<%= link_to("Delete", {:action => 'destroy', :id => page.id}, :class => 'link', confirm: "Are you sure you want to delete?")	%>	
-
-	<% end %>
-
-
+	
+	<div class="well">
+		<div class="row">
+			<% @page.each do |page| %>
+			<div class="row">
+				<div class = "span4">
+					<%= page.name %>
+					<%= page.position %>
+					<%= page.visible %>
+					<%= page.permalink %>
+				</div>
+				<div class = "span4">
+					<%= link_to("Show", {:action => 'show', :id => page.id}, :class => 'link')	%>	
+					<%= link_to("Edit", {:action => 'edit', :id => page.id}, :class => 'link')	%>	
+					<%= link_to("Delete", {:action => 'destroy', :id => page.id}, :class => 'link', confirm: "Are you sure you want to delete?")	%>	
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
 </div>
+
