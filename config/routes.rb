@@ -1,6 +1,6 @@
 SimpleCms::Application.routes.draw do
   
-  root :to => "demo#index"
+  root :to => "subjects#index"
 
   #get "demo/index"
 
