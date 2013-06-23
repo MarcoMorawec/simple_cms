@@ -4,7 +4,7 @@
 
 	<!-- Creating the form -->
 	<div class="span5 well">
-		<%= form_for(:section, :url => {:action => 'update'}) do |f| %>
+		<%= form_for(:section, :url => {:action => 'update', :id => @section.id}) do |f| %>
 			<%= f.label :name, "Section Name" %>
 				<%= f.text_field(:name) %>
 			
