@@ -1,5 +1,7 @@
 class SubjectsController < ApplicationController
 
+	layout 'admin'
+
 	#force our list page to render in case somebody goes directly to the url ./subjects (otherwise we'd get an error)
 	def index
 		list

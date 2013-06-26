@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleCms - <%= @page_title || ADMIN %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- flash message goes here -->
+<% if !flash[:notice].blank? %>
+	<div class="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<!-- end of flash message goes here -->
+
+<h2>SimpleCMS - ADMIN</h2>
+
+<%= yield %>
+
+<p>&copy by Marco Morawec</p>
+
+</body>
+</html>

@@ -1,10 +1,7 @@
+<% @page_title = "Subjects View" %>
+
 <div class = "container">
 
-	<% if !flash[:notice].blank? %>
-		<div class="alert">
-			<%= flash[:notice] %>
-		</div>
-	<% end %>
 
 	<div class="pull-left">
 		<%= link_to("<<Back to list", {:action => 'list'}, :class => 'link_style' ) %>
