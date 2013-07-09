@@ -7,16 +7,9 @@
 		<!-- Creating the form -->
 
 		<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
-			<%= f.label :name, "Subject Name" %>
-			<%= f.text_field(:name) %>
 
-			<%= f.label :name, "Subject Position" %>
-			<%= f.text_field(:position) %>
-
-			<%= f.label :name, "Subject Visible" %>
-			<%= f.text_field(:visible) %>
-
-			<%= submit_tag("Update Subject") %>
+		
+		<%= render(:partial => 'subject_form', :locals => {:f => f}) %>
 
 
 		<% end %>
