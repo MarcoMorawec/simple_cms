@@ -19,3 +19,26 @@ Next page: <%= @page + 1 %>
 
 <%= link_to("go to index", {:controller => 'demo', :action => 'index'}) %>
 
+
+<h2>Testing the text helpers</h4>
+
+
+<% text = "This is awesome. I can't belive how much work I'm saving through those text helpers" %>
+
+<%= highlight(text, 'awesome', :highlighter => '<strong>awesome</strong>') %>
+
+</p>
+<% number = 12.5 %>
+
+<%= number_to_currency(number, :precision => 2, :separator => ',', :unit => 'EUR', :format => "%n %u") %>
+<p>
+<%= number_to_percentage(number, :precision => 2) %>
+<p>
+<% area = 808 %>	
+<% phone = 8083471135 %>
+<% ext = 123 %>
+
+<%= number_to_phone(phone, :delimiter => '-', :area_code => '()', :extension => ext) %>
+
+<p>
+<%= Time.now - 30.days %>
