@@ -19,7 +19,7 @@
 		<div class="span4">
 				<%= subject.name %>
 				<%= subject.position %>
-				<%= subject.visible ? 'Yes' : 'No' %>
+				<%= status_tag(subject.visible) %>
 				<%= subject.pages.size %>
 		</div>
 		<div class="span4">
