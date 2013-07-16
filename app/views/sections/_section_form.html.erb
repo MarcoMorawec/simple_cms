@@ -4,12 +4,15 @@
 		<%= f.text_field(:position) %>
 	
 	<%= f.label :visible, "Section Visible" %>
-		<%= f.text_field(:visible) %>
+		<%= f.check_box(:visible) %>
 
 	<%= f.label :content_type, "Section Content Type" %>
-		<%= f.text_field(:content_type) %>
+		<%= f.radio_button(:content_type, "text") %> Text
+		<%= f.radio_button(:content_type, "HTML") %> HTML 
 
 	<%= f.label :content, "Section Content" %>
-		<%= f.text_field(:content) %>
+		<%= f.text_area(:content, :size => "50x10") %>
+
+	</br>
 
 

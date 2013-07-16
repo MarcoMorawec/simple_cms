@@ -6,11 +6,11 @@
 
 		<!-- Creating the form -->
 
-		<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
+		<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}, :html => {:class => 'form-horizontal'}) do |f| %>
 
 		
 		<%= render(:partial => 'subject_form', :locals => {:f => f}) %>
-
+	
 		<%= submit_tag("Update Subject") %>
 
 		<% end %>
